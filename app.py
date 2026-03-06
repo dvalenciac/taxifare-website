@@ -127,7 +127,7 @@ if st.sidebar.button('Get fare'):
             "passenger_count": passenger_count       
         }
         try:
-            response = requests.get(url, params=params, timeout=5)
+            response = requests.get(url, params=params, timeout=30)
             fare = response.json()
              
             st.sidebar.write(f"Estimated fare ${fare['fare']:.2f}")
